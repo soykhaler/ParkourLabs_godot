@@ -1,7 +1,19 @@
 [gd_resource type="Environment" load_steps=2 format=2]
 
 [sub_resource type="ProceduralSky" id=1]
+radiance_size = 4
+sky_energy = 47.67
+ground_curve = 1e-05
+sun_latitude = 39.5
+sun_energy = 12.68
 
 [resource]
-background_mode = 2
 background_sky = SubResource( 1 )
+background_color = Color( 0, 0, 0, 0 )
+background_energy = 1.56
+ambient_light_energy = 0.0
+ambient_light_sky_contribution = 0.0
+glow_enabled = true
+glow_levels/3 = false
+glow_intensity = 0.71
+glow_strength = 1.83
