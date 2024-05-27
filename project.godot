@@ -22,6 +22,10 @@ config/icon="res://icon.png"
 window/size/width=960
 window/size/height=544
 
+[global]
+
+distancia=false
+
 [gui]
 
 common/drop_mouse_on_gui_input_disabled=true
@@ -85,4 +89,5 @@ quality/driver/driver_name="GLES2"
 quality/driver/fallback_to_gles2=true
 vram_compression/import_etc=true
 vram_compression/import_etc2=false
+quality/filters/anisotropic_filter_level=2
 environment/default_environment="res://default_env.tres"
