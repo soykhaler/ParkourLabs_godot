@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://menu.gd" type="Script" id=1]
 [ext_resource path="res://Logo_png_parkour_labs_banner.png" type="Texture" id=2]
 [ext_resource path="res://menu_labs_vita.png" type="Texture" id=3]
+[ext_resource path="res://icons.png" type="Texture" id=4]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 1 )
@@ -46,6 +47,11 @@ margin_top = 488.0
 margin_right = 594.0
 margin_bottom = 549.0
 text = "Parkour Labs Available on Steam, PS5, Xbox Series, Nintendo Switch 1|2, and Meta Quest"
+
+[node name="Icons" type="Sprite" parent="Label"]
+position = Vector2( 807, -30 )
+scale = Vector2( 0.382759, 0.382759 )
+texture = ExtResource( 4 )
 
 [connection signal="pressed" from="1" to="." method="level1"]
 [connection signal="pressed" from="2" to="." method="level2"]
