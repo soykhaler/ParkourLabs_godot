@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/soykhaler-impact-sound-385397.mp3-a4ef7c19a3a07255a3372d7646fb01bd.mp3str"
+
+[deps]
+
+source_file="res://soykhaler-impact-sound-385397.mp3"
+dest_files=[ "res://.import/soykhaler-impact-sound-385397.mp3-a4ef7c19a3a07255a3372d7646fb01bd.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

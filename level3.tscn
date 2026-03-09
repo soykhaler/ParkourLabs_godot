@@ -1,15 +1,16 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://KinematicBody.tscn" type="PackedScene" id=1]
 [ext_resource path="res://CollisionShape.gd" type="Script" id=2]
 [ext_resource path="res://Material_001.material" type="Material" id=3]
 [ext_resource path="res://Material.material" type="Material" id=4]
 [ext_resource path="res://Material_004.material" type="Material" id=5]
-[ext_resource path="res://homebrew version.wav" type="AudioStream" id=6]
+[ext_resource path="res://1 - My heart is in 8bit (Chiptune Version).mp3" type="AudioStream" id=6]
 [ext_resource path="res://Material_03.material" type="Material" id=7]
 [ext_resource path="res://ground.fbx" type="PackedScene" id=8]
 [ext_resource path="res://end.gd" type="Script" id=9]
 [ext_resource path="res://Material_003.material" type="Material" id=10]
+[ext_resource path="res://soykhaler-impact-sound-385397.mp3" type="AudioStream" id=11]
 
 [sub_resource type="ArrayMesh" id=10]
 resource_name = "asset platfor_Cube002"
@@ -39,7 +40,7 @@ surfaces/1 = {
 }
 
 [sub_resource type="BoxShape" id=2]
-extents = Vector3( 1, 149.414, 1.91272 )
+extents = Vector3( 0.858635, 149.414, 1.09401 )
 
 [sub_resource type="BoxShape" id=3]
 
@@ -80,411 +81,265 @@ extents = Vector3( 0.314815, 0.245386, 0.832057 )
 [node name="Spatial" type="Spatial"]
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
+unique_name_in_owner = true
 transform = Transform( -0.99998, 0, 0.00637041, 0, 1, 0, -0.00637041, 0, -0.99998, 1.18772, 12.0838, -3.2909 )
 speed = 40
 fall_acceleration = 100
 jump_speed = 50
 
-[node name="KinematicBody2" type="KinematicBody" parent="."]
+[node name="normalPlatform" type="KinematicBody" parent="."]
+__meta__ = {
+"_edit_group_": true
+}
 
-[node name="Cube" type="MeshInstance" parent="KinematicBody2"]
+[node name="Cube" type="MeshInstance" parent="normalPlatform"]
 transform = Transform( 15.6917, 0, 0, 0, 4.84031, 0, 0, 0, 19.6692, 0, 0, 0 )
 mesh = SubResource( 10 )
 skeleton = NodePath("")
 material/0 = ExtResource( 3 )
 
-[node name="CollisionShape" type="CollisionShape" parent="KinematicBody2"]
-transform = Transform( 21.9724, 0, 0, 0, 0.0356929, 0, 0, 0, 20.0131, -3.11031, 1.19486, 0.0257187 )
+[node name="CollisionShape" type="CollisionShape" parent="normalPlatform"]
+transform = Transform( 21.9724, 0, 0, 0, 0.0356929, 0, 0, 0, 20.0131, -0.923916, 1.19486, 0.0257187 )
 shape = SubResource( 2 )
 
-[node name="KinematicBody3" type="KinematicBody" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 92.0492 )
+[node name="normalPlatform2" type="KinematicBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 141.426 )
+__meta__ = {
+"_edit_group_": true
+}
 
-[node name="Cube" type="MeshInstance" parent="KinematicBody3"]
+[node name="Cube" type="MeshInstance" parent="normalPlatform2"]
 transform = Transform( 15.6917, 0, 0, 0, 4.84031, 0, 0, 0, 19.6692, 0, 0, 0 )
 mesh = SubResource( 10 )
 skeleton = NodePath("")
 material/0 = ExtResource( 3 )
 
-[node name="CollisionShape" type="CollisionShape" parent="KinematicBody3"]
-transform = Transform( 21.9724, 0, 0, 0, 0.0356929, 0, 0, 0, 20.0131, -3.11031, 1.19486, 0.0257187 )
+[node name="CollisionShape" type="CollisionShape" parent="normalPlatform2"]
+transform = Transform( 21.9724, 0, 0, 0, 0.0356929, 0, 0, 0, 20.0131, -0.923916, 1.19486, 0.0257187 )
 shape = SubResource( 2 )
 
-[node name="KinematicBody26" type="KinematicBody" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 48.5313 )
+[node name="normalPlatform5" type="KinematicBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 32.7785, 0, 141.426 )
+__meta__ = {
+"_edit_group_": true
+}
 
-[node name="Cube" type="MeshInstance" parent="KinematicBody26"]
+[node name="Cube" type="MeshInstance" parent="normalPlatform5"]
 transform = Transform( 15.6917, 0, 0, 0, 4.84031, 0, 0, 0, 19.6692, 0, 0, 0 )
 mesh = SubResource( 10 )
 skeleton = NodePath("")
 material/0 = ExtResource( 3 )
 
-[node name="CollisionShape" type="CollisionShape" parent="KinematicBody26"]
-transform = Transform( 21.9724, 0, 0, 0, 0.0356929, 0, 0, 0, 20.0131, -3.11031, 1.19486, 0.0257187 )
+[node name="CollisionShape" type="CollisionShape" parent="normalPlatform5"]
+transform = Transform( 21.9724, 0, 0, 0, 0.0356929, 0, 0, 0, 20.0131, -0.923916, 1.19486, 0.0257187 )
 shape = SubResource( 2 )
 
-[node name="KinematicBody4" type="KinematicBody" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 136.134 )
+[node name="normalPlatform6" type="KinematicBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -33.9023, 0, 141.426 )
+__meta__ = {
+"_edit_group_": true
+}
 
-[node name="Cube" type="MeshInstance" parent="KinematicBody4"]
+[node name="Cube" type="MeshInstance" parent="normalPlatform6"]
 transform = Transform( 15.6917, 0, 0, 0, 4.84031, 0, 0, 0, 19.6692, 0, 0, 0 )
 mesh = SubResource( 10 )
 skeleton = NodePath("")
 material/0 = ExtResource( 3 )
 
-[node name="CollisionShape" type="CollisionShape" parent="KinematicBody4"]
-transform = Transform( 21.9724, 0, 0, 0, 0.0356929, 0, 0, 0, 20.0131, -3.11031, 1.19486, 0.0257187 )
+[node name="CollisionShape" type="CollisionShape" parent="normalPlatform6"]
+transform = Transform( 21.9724, 0, 0, 0, 0.0356929, 0, 0, 0, 20.0131, -0.923916, 1.19486, 0.0257187 )
 shape = SubResource( 2 )
 
-[node name="KinematicBody5" type="KinematicBody" parent="."]
-transform = Transform( 0.794722, -0.606974, 0, 0.606974, 0.794722, 0, 0, 0, 1, 33.5008, 9.26223, 136.134 )
+[node name="normalPlatform7" type="KinematicBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 32.7785, 0, 264.698 )
+__meta__ = {
+"_edit_group_": true
+}
 
-[node name="Cube" type="MeshInstance" parent="KinematicBody5"]
+[node name="Cube" type="MeshInstance" parent="normalPlatform7"]
 transform = Transform( 15.6917, 0, 0, 0, 4.84031, 0, 0, 0, 19.6692, 0, 0, 0 )
 mesh = SubResource( 10 )
 skeleton = NodePath("")
 material/0 = ExtResource( 3 )
 
-[node name="CollisionShape" type="CollisionShape" parent="KinematicBody5"]
-transform = Transform( 21.9724, 0, 0, 0, 0.0356929, 0, 0, 0, 20.0131, -3.11031, 1.19486, 0.0257187 )
+[node name="CollisionShape" type="CollisionShape" parent="normalPlatform7"]
+transform = Transform( 21.9724, 0, 0, 0, 0.0356929, 0, 0, 0, 20.0131, -0.923916, 1.19486, 0.0257187 )
 shape = SubResource( 2 )
 
-[node name="KinematicBody6" type="KinematicBody" parent="."]
-transform = Transform( 0.822174, 0.569237, 0, -0.569237, 0.822174, 0, 0, 0, 1, -34.1943, 8.14173, 136.134 )
+[node name="normalPlatform8" type="KinematicBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -33.9023, 0, 264.698 )
+__meta__ = {
+"_edit_group_": true
+}
 
-[node name="Cube" type="MeshInstance" parent="KinematicBody6"]
+[node name="Cube" type="MeshInstance" parent="normalPlatform8"]
 transform = Transform( 15.6917, 0, 0, 0, 4.84031, 0, 0, 0, 19.6692, 0, 0, 0 )
 mesh = SubResource( 10 )
 skeleton = NodePath("")
 material/0 = ExtResource( 3 )
 
-[node name="CollisionShape" type="CollisionShape" parent="KinematicBody6"]
-transform = Transform( 21.9724, 0, 0, 0, 0.0356929, 0, 0, 0, 20.0131, -3.11031, 1.19486, 0.0257187 )
+[node name="CollisionShape" type="CollisionShape" parent="normalPlatform8"]
+transform = Transform( 21.9724, 0, 0, 0, 0.0356929, 0, 0, 0, 20.0131, -0.923916, 1.19486, 0.0257187 )
 shape = SubResource( 2 )
 
-[node name="KinematicBody7" type="KinematicBody" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 182.631 )
+[node name="normalPlatform9" type="KinematicBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 32.7785, 0, 354.205 )
+__meta__ = {
+"_edit_group_": true
+}
 
-[node name="Cube" type="MeshInstance" parent="KinematicBody7"]
+[node name="Cube" type="MeshInstance" parent="normalPlatform9"]
 transform = Transform( 15.6917, 0, 0, 0, 4.84031, 0, 0, 0, 19.6692, 0, 0, 0 )
 mesh = SubResource( 10 )
 skeleton = NodePath("")
 material/0 = ExtResource( 3 )
 
-[node name="CollisionShape" type="CollisionShape" parent="KinematicBody7"]
-transform = Transform( 21.9724, 0, 0, 0, 0.0356929, 0, 0, 0, 20.0131, -3.11031, 1.19486, 0.0257187 )
+[node name="CollisionShape" type="CollisionShape" parent="normalPlatform9"]
+transform = Transform( 21.9724, 0, 0, 0, 0.0356929, 0, 0, 0, 20.0131, -0.923916, 1.19486, 0.0257187 )
 shape = SubResource( 2 )
 
-[node name="KinematicBody8" type="KinematicBody" parent="."]
-transform = Transform( 0.794722, -0.606974, 0, 0.606974, 0.794722, 0, 0, 0, 1, 33.5008, 9.26223, 182.631 )
+[node name="normalPlatform10" type="KinematicBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -33.9023, 0, 354.205 )
+__meta__ = {
+"_edit_group_": true
+}
 
-[node name="Cube" type="MeshInstance" parent="KinematicBody8"]
+[node name="Cube" type="MeshInstance" parent="normalPlatform10"]
 transform = Transform( 15.6917, 0, 0, 0, 4.84031, 0, 0, 0, 19.6692, 0, 0, 0 )
 mesh = SubResource( 10 )
 skeleton = NodePath("")
 material/0 = ExtResource( 3 )
 
-[node name="CollisionShape" type="CollisionShape" parent="KinematicBody8"]
-transform = Transform( 21.9724, 0, 0, 0, 0.0356929, 0, 0, 0, 20.0131, -3.11031, 1.19486, 0.0257187 )
+[node name="CollisionShape" type="CollisionShape" parent="normalPlatform10"]
+transform = Transform( 21.9724, 0, 0, 0, 0.0356929, 0, 0, 0, 20.0131, -0.923916, 1.19486, 0.0257187 )
 shape = SubResource( 2 )
 
-[node name="KinematicBody9" type="KinematicBody" parent="."]
-transform = Transform( 0.822174, 0.569237, 0, -0.569237, 0.822174, 0, 0, 0, 1, -34.1943, 8.14173, 182.631 )
+[node name="normalPlatform3" type="KinematicBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 184.175 )
+__meta__ = {
+"_edit_group_": true
+}
 
-[node name="Cube" type="MeshInstance" parent="KinematicBody9"]
+[node name="Cube" type="MeshInstance" parent="normalPlatform3"]
 transform = Transform( 15.6917, 0, 0, 0, 4.84031, 0, 0, 0, 19.6692, 0, 0, 0 )
 mesh = SubResource( 10 )
 skeleton = NodePath("")
 material/0 = ExtResource( 3 )
 
-[node name="CollisionShape" type="CollisionShape" parent="KinematicBody9"]
-transform = Transform( 21.9724, 0, 0, 0, 0.0356929, 0, 0, 0, 20.0131, -3.11031, 1.19486, 0.0257187 )
+[node name="CollisionShape" type="CollisionShape" parent="normalPlatform3"]
+transform = Transform( 21.9724, 0, 0, 0, 0.0356929, 0, 0, 0, 20.0131, -0.923916, 1.19486, 0.0257187 )
 shape = SubResource( 2 )
 
-[node name="KinematicBody10" type="KinematicBody" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 229.133 )
+[node name="normalPlatform11" type="KinematicBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 445.617 )
+__meta__ = {
+"_edit_group_": true
+}
 
-[node name="Cube" type="MeshInstance" parent="KinematicBody10"]
+[node name="Cube" type="MeshInstance" parent="normalPlatform11"]
 transform = Transform( 15.6917, 0, 0, 0, 4.84031, 0, 0, 0, 19.6692, 0, 0, 0 )
 mesh = SubResource( 10 )
 skeleton = NodePath("")
 material/0 = ExtResource( 3 )
 
-[node name="CollisionShape" type="CollisionShape" parent="KinematicBody10"]
-transform = Transform( 21.9724, 0, 0, 0, 0.0356929, 0, 0, 0, 20.0131, -3.11031, 1.19486, 0.0257187 )
+[node name="CollisionShape" type="CollisionShape" parent="normalPlatform11"]
+transform = Transform( 21.9724, 0, 0, 0, 0.0356929, 0, 0, 0, 20.0131, -0.923916, 1.19486, 0.0257187 )
 shape = SubResource( 2 )
 
-[node name="KinematicBody11" type="KinematicBody" parent="."]
-transform = Transform( 0.794722, -0.606974, 0, 0.606974, 0.794722, 0, 0, 0, 1, 33.5008, 9.26223, 229.133 )
+[node name="normalPlatform12" type="KinematicBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -33.9023, 0, 445.617 )
+__meta__ = {
+"_edit_group_": true
+}
 
-[node name="Cube" type="MeshInstance" parent="KinematicBody11"]
+[node name="Cube" type="MeshInstance" parent="normalPlatform12"]
 transform = Transform( 15.6917, 0, 0, 0, 4.84031, 0, 0, 0, 19.6692, 0, 0, 0 )
 mesh = SubResource( 10 )
 skeleton = NodePath("")
 material/0 = ExtResource( 3 )
 
-[node name="CollisionShape" type="CollisionShape" parent="KinematicBody11"]
-transform = Transform( 21.9724, 0, 0, 0, 0.0356929, 0, 0, 0, 20.0131, -3.11031, 1.19486, 0.0257187 )
+[node name="CollisionShape" type="CollisionShape" parent="normalPlatform12"]
+transform = Transform( 21.9724, 0, 0, 0, 0.0356929, 0, 0, 0, 20.0131, -0.923916, 1.19486, 0.0257187 )
 shape = SubResource( 2 )
 
-[node name="KinematicBody12" type="KinematicBody" parent="."]
-transform = Transform( 0.822174, 0.569237, 0, -0.569237, 0.822174, 0, 0, 0, 1, -34.1943, 8.14173, 229.133 )
+[node name="normalPlatform13" type="KinematicBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 488.365 )
+__meta__ = {
+"_edit_group_": true
+}
 
-[node name="Cube" type="MeshInstance" parent="KinematicBody12"]
+[node name="Cube" type="MeshInstance" parent="normalPlatform13"]
 transform = Transform( 15.6917, 0, 0, 0, 4.84031, 0, 0, 0, 19.6692, 0, 0, 0 )
 mesh = SubResource( 10 )
 skeleton = NodePath("")
 material/0 = ExtResource( 3 )
 
-[node name="CollisionShape" type="CollisionShape" parent="KinematicBody12"]
-transform = Transform( 21.9724, 0, 0, 0, 0.0356929, 0, 0, 0, 20.0131, -3.11031, 1.19486, 0.0257187 )
+[node name="CollisionShape" type="CollisionShape" parent="normalPlatform13"]
+transform = Transform( 21.9724, 0, 0, 0, 0.0356929, 0, 0, 0, 20.0131, -0.923916, 1.19486, 0.0257187 )
 shape = SubResource( 2 )
 
-[node name="KinematicBody13" type="KinematicBody" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 282.92 )
+[node name="normalPlatform14" type="KinematicBody" parent="."]
+transform = Transform( -0.0475074, 0, -0.998871, 0, 1, 0, 0.998871, 0, -0.0475074, 3.59369, 0, 600.413 )
+__meta__ = {
+"_edit_group_": true
+}
 
-[node name="Cube" type="MeshInstance" parent="KinematicBody13"]
+[node name="Cube" type="MeshInstance" parent="normalPlatform14"]
 transform = Transform( 15.6917, 0, 0, 0, 4.84031, 0, 0, 0, 19.6692, 0, 0, 0 )
 mesh = SubResource( 10 )
 skeleton = NodePath("")
 material/0 = ExtResource( 3 )
 
-[node name="CollisionShape" type="CollisionShape" parent="KinematicBody13"]
-transform = Transform( 21.9724, 0, 0, 0, 0.0356929, 0, 0, 0, 20.0131, -3.11031, 1.19486, 0.0257187 )
+[node name="CollisionShape" type="CollisionShape" parent="normalPlatform14"]
+transform = Transform( 21.9724, 0, 0, 0, 0.0356929, 0, 0, 0, 20.0131, -0.923916, 1.19486, 0.0257187 )
 shape = SubResource( 2 )
 
-[node name="KinematicBody14" type="KinematicBody" parent="."]
-transform = Transform( 0.794722, -0.606974, 0, 0.606974, 0.794722, 0, 0, 0, 1, 33.5008, 9.26223, 282.92 )
+[node name="normalPlatform15" type="KinematicBody" parent="."]
+transform = Transform( -0.0475074, 0, -0.998871, 0, 1, 0, 0.998871, 0, -0.0475074, 5.20428, 0, 566.549 )
+__meta__ = {
+"_edit_group_": true
+}
 
-[node name="Cube" type="MeshInstance" parent="KinematicBody14"]
+[node name="Cube" type="MeshInstance" parent="normalPlatform15"]
 transform = Transform( 15.6917, 0, 0, 0, 4.84031, 0, 0, 0, 19.6692, 0, 0, 0 )
 mesh = SubResource( 10 )
 skeleton = NodePath("")
 material/0 = ExtResource( 3 )
 
-[node name="CollisionShape" type="CollisionShape" parent="KinematicBody14"]
-transform = Transform( 21.9724, 0, 0, 0, 0.0356929, 0, 0, 0, 20.0131, -3.11031, 1.19486, 0.0257187 )
+[node name="CollisionShape" type="CollisionShape" parent="normalPlatform15"]
+transform = Transform( 21.9724, 0, 0, 0, 0.0356929, 0, 0, 0, 20.0131, -0.923916, 1.19486, 0.0257187 )
 shape = SubResource( 2 )
 
-[node name="KinematicBody15" type="KinematicBody" parent="."]
-transform = Transform( 0.822174, 0.569237, 0, -0.569237, 0.822174, 0, 0, 0, 1, -34.1943, 8.14173, 282.92 )
+[node name="normalPlatform16" type="KinematicBody" parent="."]
+transform = Transform( -0.0475074, 0, -0.998871, 0, 1, 0, 0.998871, 0, -0.0475074, -39.1066, 0, 598.382 )
+__meta__ = {
+"_edit_group_": true
+}
 
-[node name="Cube" type="MeshInstance" parent="KinematicBody15"]
+[node name="Cube" type="MeshInstance" parent="normalPlatform16"]
 transform = Transform( 15.6917, 0, 0, 0, 4.84031, 0, 0, 0, 19.6692, 0, 0, 0 )
 mesh = SubResource( 10 )
 skeleton = NodePath("")
 material/0 = ExtResource( 3 )
 
-[node name="CollisionShape" type="CollisionShape" parent="KinematicBody15"]
-transform = Transform( 21.9724, 0, 0, 0, 0.0356929, 0, 0, 0, 20.0131, -3.11031, 1.19486, 0.0257187 )
+[node name="CollisionShape" type="CollisionShape" parent="normalPlatform16"]
+transform = Transform( 21.9724, 0, 0, 0, 0.0356929, 0, 0, 0, 20.0131, -0.923916, 1.19486, 0.0257187 )
 shape = SubResource( 2 )
 
-[node name="KinematicBody16" type="KinematicBody" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.247143, 0.235451, 333.316 )
+[node name="normalPlatform4" type="KinematicBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 98.4388 )
+__meta__ = {
+"_edit_group_": true
+}
 
-[node name="Cube" type="MeshInstance" parent="KinematicBody16"]
+[node name="Cube" type="MeshInstance" parent="normalPlatform4"]
 transform = Transform( 15.6917, 0, 0, 0, 4.84031, 0, 0, 0, 19.6692, 0, 0, 0 )
 mesh = SubResource( 10 )
 skeleton = NodePath("")
 material/0 = ExtResource( 3 )
 
-[node name="CollisionShape" type="CollisionShape" parent="KinematicBody16"]
-transform = Transform( 21.9724, 0, 0, 0, 0.0356929, 0, 0, 0, 20.0131, -3.11031, 1.19486, 0.0257187 )
-shape = SubResource( 2 )
-
-[node name="KinematicBody19" type="KinematicBody" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.247143, 45.1386, 333.316 )
-
-[node name="Cube" type="MeshInstance" parent="KinematicBody19"]
-transform = Transform( 15.6917, 0, 0, 0, 4.84031, 0, 0, 0, 19.6692, 0, 0, 0 )
-mesh = SubResource( 10 )
-skeleton = NodePath("")
-material/0 = ExtResource( 3 )
-
-[node name="CollisionShape" type="CollisionShape" parent="KinematicBody19"]
-transform = Transform( 21.9724, 0, 0, 0, 0.0356929, 0, 0, 0, 20.0131, -3.11031, 1.19486, 0.0257187 )
-shape = SubResource( 2 )
-
-[node name="KinematicBody20" type="KinematicBody" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.247143, 45.1386, 266.523 )
-
-[node name="Cube" type="MeshInstance" parent="KinematicBody20"]
-transform = Transform( 15.6917, 0, 0, 0, 4.84031, 0, 0, 0, 19.6692, 0, 0, 0 )
-mesh = SubResource( 10 )
-skeleton = NodePath("")
-material/0 = ExtResource( 3 )
-
-[node name="CollisionShape" type="CollisionShape" parent="KinematicBody20"]
-transform = Transform( 21.9724, 0, 0, 0, 0.0356929, 0, 0, 0, 20.0131, -3.11031, 1.19486, 0.0257187 )
-shape = SubResource( 2 )
-
-[node name="KinematicBody21" type="KinematicBody" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.247143, 45.1386, 210.582 )
-
-[node name="Cube" type="MeshInstance" parent="KinematicBody21"]
-transform = Transform( 15.6917, 0, 0, 0, 4.84031, 0, 0, 0, 19.6692, 0, 0, 0 )
-mesh = SubResource( 10 )
-skeleton = NodePath("")
-material/0 = ExtResource( 3 )
-
-[node name="CollisionShape" type="CollisionShape" parent="KinematicBody21"]
-transform = Transform( 21.9724, 0, 0, 0, 0.0356929, 0, 0, 0, 20.0131, -3.11031, 1.19486, 0.0257187 )
-shape = SubResource( 2 )
-
-[node name="KinematicBody22" type="KinematicBody" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.247143, 45.1386, 149.852 )
-
-[node name="Cube" type="MeshInstance" parent="KinematicBody22"]
-transform = Transform( 15.6917, 0, 0, 0, 4.84031, 0, 0, 0, 19.6692, 0, 0, 0 )
-mesh = SubResource( 10 )
-skeleton = NodePath("")
-material/0 = ExtResource( 3 )
-
-[node name="CollisionShape" type="CollisionShape" parent="KinematicBody22"]
-transform = Transform( 21.9724, 0, 0, 0, 0.0356929, 0, 0, 0, 20.0131, -3.11031, 1.19486, 0.0257187 )
-shape = SubResource( 2 )
-
-[node name="KinematicBody25" type="KinematicBody" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.247143, 45.1386, 149.852 )
-
-[node name="Cube" type="MeshInstance" parent="KinematicBody25"]
-transform = Transform( 15.6917, 0, 0, 0, 4.84031, 0, 0, 0, 19.6692, 0, 0, 0 )
-mesh = SubResource( 10 )
-skeleton = NodePath("")
-material/0 = ExtResource( 3 )
-
-[node name="CollisionShape" type="CollisionShape" parent="KinematicBody25"]
-transform = Transform( 21.9724, 0, 0, 0, 0.0356929, 0, 0, 0, 20.0131, -3.11031, 1.19486, 0.0257187 )
-shape = SubResource( 2 )
-
-[node name="KinematicBody17" type="KinematicBody" parent="."]
-transform = Transform( 0.794722, -0.606974, 0, 0.606974, 0.794722, 0, 0, 0, 1, 33.7479, 9.49768, 333.316 )
-
-[node name="Cube" type="MeshInstance" parent="KinematicBody17"]
-transform = Transform( 15.6917, 0, 0, 0, 4.84031, 0, 0, 0, 19.6692, 0, 0, 0 )
-mesh = SubResource( 10 )
-skeleton = NodePath("")
-material/0 = ExtResource( 3 )
-
-[node name="CollisionShape" type="CollisionShape" parent="KinematicBody17"]
-transform = Transform( 21.9724, 0, 0, 0, 0.0356929, 0, 0, 0, 20.0131, -3.11031, 1.19486, 0.0257187 )
-shape = SubResource( 2 )
-
-[node name="KinematicBody18" type="KinematicBody" parent="."]
-transform = Transform( 0.822174, 0.569237, 0, -0.569237, 0.822174, 0, 0, 0, 1, -33.9472, 8.37718, 333.316 )
-
-[node name="Cube" type="MeshInstance" parent="KinematicBody18"]
-transform = Transform( 15.6917, 0, 0, 0, 4.84031, 0, 0, 0, 19.6692, 0, 0, 0 )
-mesh = SubResource( 10 )
-skeleton = NodePath("")
-material/0 = ExtResource( 3 )
-
-[node name="CollisionShape" type="CollisionShape" parent="KinematicBody18"]
-transform = Transform( 21.9724, 0, 0, 0, 0.0356929, 0, 0, 0, 20.0131, -3.11031, 1.19486, 0.0257187 )
-shape = SubResource( 2 )
-
-[node name="KinematicBody27" type="KinematicBody" parent="."]
-transform = Transform( 0.822174, 0.569237, 0, -0.569237, 0.822174, 0, 0, 0, 1, -21.0255, 7.75744, 386.974 )
-
-[node name="Cube" type="MeshInstance" parent="KinematicBody27"]
-transform = Transform( 15.6917, 0, 0, 0, 4.84031, 0, 0, 0, 19.6692, 0, 0, 0 )
-mesh = SubResource( 10 )
-skeleton = NodePath("")
-material/0 = ExtResource( 3 )
-
-[node name="CollisionShape" type="CollisionShape" parent="KinematicBody27"]
-transform = Transform( 21.9724, 0, 0, 0, 0.0356929, 0, 0, 0, 20.0131, -3.11031, 1.19486, 0.0257187 )
-shape = SubResource( 2 )
-
-[node name="KinematicBody28" type="KinematicBody" parent="."]
-transform = Transform( 0.751817, -0.659372, 0, 0.659372, 0.751817, 0, 0, 0, 1, 21.7347, 7.76706, 430.384 )
-
-[node name="Cube" type="MeshInstance" parent="KinematicBody28"]
-transform = Transform( 15.6917, 0, 0, 0, 4.84031, 0, 0, 0, 19.6692, 0, 0, 0 )
-mesh = SubResource( 10 )
-skeleton = NodePath("")
-material/0 = ExtResource( 3 )
-
-[node name="CollisionShape" type="CollisionShape" parent="KinematicBody28"]
-transform = Transform( 21.9724, 0, 0, 0, 0.0356929, 0, 0, 0, 20.0131, -3.11031, 1.19486, 0.0257187 )
-shape = SubResource( 2 )
-
-[node name="KinematicBody29" type="KinematicBody" parent="."]
-transform = Transform( 0.822174, 0.569237, 0, -0.569237, 0.822174, 0, 0, 0, 1, -21.0255, 7.75744, 467.823 )
-
-[node name="Cube" type="MeshInstance" parent="KinematicBody29"]
-transform = Transform( 15.6917, 0, 0, 0, 4.84031, 0, 0, 0, 19.6692, 0, 0, 0 )
-mesh = SubResource( 10 )
-skeleton = NodePath("")
-material/0 = ExtResource( 3 )
-
-[node name="CollisionShape" type="CollisionShape" parent="KinematicBody29"]
-transform = Transform( 21.9724, 0, 0, 0, 0.0356929, 0, 0, 0, 20.0131, -3.11031, 1.19486, 0.0257187 )
-shape = SubResource( 2 )
-
-[node name="KinematicBody30" type="KinematicBody" parent="."]
-transform = Transform( 0.751817, -0.659372, 0, 0.659372, 0.751817, 0, 0, 0, 1, 21.7347, 7.76706, 511.233 )
-
-[node name="Cube" type="MeshInstance" parent="KinematicBody30"]
-transform = Transform( 15.6917, 0, 0, 0, 4.84031, 0, 0, 0, 19.6692, 0, 0, 0 )
-mesh = SubResource( 10 )
-skeleton = NodePath("")
-material/0 = ExtResource( 3 )
-
-[node name="CollisionShape" type="CollisionShape" parent="KinematicBody30"]
-transform = Transform( 21.9724, 0, 0, 0, 0.0356929, 0, 0, 0, 20.0131, -3.11031, 1.19486, 0.0257187 )
-shape = SubResource( 2 )
-
-[node name="KinematicBody31" type="KinematicBody" parent="."]
-transform = Transform( 0.822174, 0.569237, 0, -0.569237, 0.822174, 0, 0, 0, 1, -21.0255, 7.75744, 533.16 )
-
-[node name="Cube" type="MeshInstance" parent="KinematicBody31"]
-transform = Transform( 15.6917, 0, 0, 0, 4.84031, 0, 0, 0, 19.6692, 0, 0, 0 )
-mesh = SubResource( 10 )
-skeleton = NodePath("")
-material/0 = ExtResource( 3 )
-
-[node name="CollisionShape" type="CollisionShape" parent="KinematicBody31"]
-transform = Transform( 21.9724, 0, 0, 0, 0.0356929, 0, 0, 0, 20.0131, -3.11031, 1.19486, 0.0257187 )
-shape = SubResource( 2 )
-
-[node name="KinematicBody32" type="KinematicBody" parent="."]
-transform = Transform( 0.751817, -0.659372, 0, 0.659372, 0.751817, 0, 0, 0, 1, 21.7347, 7.76706, 576.57 )
-
-[node name="Cube" type="MeshInstance" parent="KinematicBody32"]
-transform = Transform( 15.6917, 0, 0, 0, 4.84031, 0, 0, 0, 19.6692, 0, 0, 0 )
-mesh = SubResource( 10 )
-skeleton = NodePath("")
-material/0 = ExtResource( 3 )
-
-[node name="CollisionShape" type="CollisionShape" parent="KinematicBody32"]
-transform = Transform( 21.9724, 0, 0, 0, 0.0356929, 0, 0, 0, 20.0131, -3.11031, 1.19486, 0.0257187 )
-shape = SubResource( 2 )
-
-[node name="KinematicBody33" type="KinematicBody" parent="."]
-transform = Transform( 0.822174, 0.569237, 0, -0.569237, 0.822174, 0, 0, 0, 1, -21.0476, 5.60089, 595.974 )
-
-[node name="Cube" type="MeshInstance" parent="KinematicBody33"]
-transform = Transform( 15.6917, 0, 0, 0, 4.84031, 0, 0, 0, 19.6692, 0, 0, 0 )
-mesh = SubResource( 10 )
-skeleton = NodePath("")
-material/0 = ExtResource( 3 )
-
-[node name="CollisionShape" type="CollisionShape" parent="KinematicBody33"]
-transform = Transform( 21.9724, 0, 0, 0, 0.0356929, 0, 0, 0, 20.0131, -3.11031, 1.19486, 0.0257187 )
-shape = SubResource( 2 )
-
-[node name="KinematicBody34" type="KinematicBody" parent="."]
-transform = Transform( 0.751817, -0.659372, 0, 0.659372, 0.751817, 0, 0, 0, 1, 21.7126, 5.61051, 639.383 )
-
-[node name="Cube" type="MeshInstance" parent="KinematicBody34"]
-transform = Transform( 15.6917, 0, 0, 0, 4.84031, 0, 0, 0, 19.6692, 0, 0, 0 )
-mesh = SubResource( 10 )
-skeleton = NodePath("")
-material/0 = ExtResource( 3 )
-
-[node name="CollisionShape" type="CollisionShape" parent="KinematicBody34"]
-transform = Transform( 21.9724, 0, 0, 0, 0.0356929, 0, 0, 0, 20.0131, -3.11031, 1.19486, 0.0257187 )
+[node name="CollisionShape" type="CollisionShape" parent="normalPlatform4"]
+transform = Transform( 21.9724, 0, 0, 0, 0.0356929, 0, 0, 0, 20.0131, -0.923916, 1.19486, 0.0257187 )
 shape = SubResource( 2 )
 
 [node name="Area" type="Area" parent="."]
@@ -494,6 +349,10 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.582386, -65.2425, 0.244167 
 transform = Transform( 3000, 0, 0, 0, 20, 0, 0, 0, 3000, 28.0713, -36.572, -0.562454 )
 shape = SubResource( 3 )
 script = ExtResource( 2 )
+
+[node name="fall" type="AudioStreamPlayer" parent="Area/CollisionShape"]
+unique_name_in_owner = true
+stream = ExtResource( 11 )
 
 [node name="Area2" type="Area" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.68708, -104.77, 589.554 )
@@ -515,18 +374,18 @@ transform = Transform( 3000, 0, 0, 0, 20, 0, 0, 0, 3000, 28.0713, -36.572, -0.56
 shape = SubResource( 3 )
 script = ExtResource( 2 )
 
-[node name="KinematicBody23" type="KinematicBody" parent="."]
+[node name="endPlatform" type="KinematicBody" parent="."]
 transform = Transform( 0.754087, 0, 0, 0, 8.61351, 0, 0, 0, 1.22334, 9.61606, -15.1694, 699.263 )
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="MeshInstance" type="MeshInstance" parent="KinematicBody23"]
+[node name="MeshInstance" type="MeshInstance" parent="endPlatform"]
 transform = Transform( 21.9724, 0, 0, 0, 0.0356929, 0, 0, 0, 20.0131, 0, 0, 0 )
 mesh = SubResource( 1 )
 skeleton = NodePath("../..")
 
-[node name="Cube002" type="MeshInstance" parent="KinematicBody23"]
+[node name="Cube002" type="MeshInstance" parent="endPlatform"]
 transform = Transform( 29.6831, 0, 0, 0, 0.945348, 0, 0, 0, 20.5598, 0, 0, 0 )
 mesh = SubResource( 7 )
 skeleton = NodePath("../../KinematicBody24")
@@ -544,6 +403,7 @@ shape = SubResource( 2 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 6 )
+autoplay = true
 
 [node name="Area4" type="Area" parent="."]
 transform = Transform( 3.68182, 0, 0, 0, 7.18368, 0, 0, 0, 3.80372, -13.8817, 12.4998, 709.715 )
@@ -570,7 +430,7 @@ margin_left = 3.0
 margin_top = -41.512
 margin_right = 583.0
 margin_bottom = 19.488
-text = "Add this game to wishlist on Steam!"
+text = "Parkour Labs Available on Steam, PS5, Xbox Series, Nintendo Switch 1|2, and Meta Quest"
 
 [connection signal="body_entered" from="Area" to="Area/CollisionShape" method="_on_Area_body_entered"]
 [connection signal="body_entered" from="Area2" to="Area2/CollisionShape" method="_on_Area_body_entered"]

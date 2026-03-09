@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/1 - My heart is in 8bit (Chiptune Version).mp3-c1e6c73978ef18dc0918d78d72380fce.mp3str"
+
+[deps]
+
+source_file="res://1 - My heart is in 8bit (Chiptune Version).mp3"
+dest_files=[ "res://.import/1 - My heart is in 8bit (Chiptune Version).mp3-c1e6c73978ef18dc0918d78d72380fce.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
